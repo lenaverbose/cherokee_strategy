@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cherokee Lifecycle Strategy (Editable)</title>
+<title>Cherokee Lifecycle Strategy</title>
 <style>
 :root{
   --navy:#000255; --navy2:#00058D; --accent:#00058D; --accent-bg:#e7e8f6;
@@ -139,16 +139,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
 @media(max-width:860px){.kpis{grid-template-columns:1fr 1fr}.seg-grid{grid-template-columns:repeat(3,1fr)}.themes{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.seg-grid{grid-template-columns:repeat(2,1fr)}}
 
-/* --- in-browser editing layer (removed automatically on download) --- */
-#editbar{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;align-items:center;gap:10px;background:var(--navy);color:#fff;padding:9px 12px;border-radius:12px;box-shadow:0 6px 24px rgba(0,2,85,.28);font-size:12.5px}
-#editbar .hint{color:#c3cbea;font-size:11.5px}
-#editbar button{font:inherit;font-weight:600;border:0;border-radius:8px;padding:7px 12px;cursor:pointer;background:#fff;color:var(--navy)}
-#editbar button#toggleEdit{background:#2a2f7a;color:#fff}
-#editbar button:hover{opacity:.9}
-body.editing [contenteditable]{border-radius:5px;transition:box-shadow .12s,background .12s}
-body.editing [contenteditable]:hover{box-shadow:0 0 0 1px #c7cbf0;background:rgba(0,5,141,.03)}
-body.editing [contenteditable]:focus{outline:0;box-shadow:0 0 0 2px var(--accent);background:#fff}
-@media print{#editbar{display:none}}
 </style>
 </head>
 <body>
@@ -458,7 +448,7 @@ body.editing [contenteditable]:focus{outline:0;box-shadow:0 0 0 2px var(--accent
   <div class="panel" id="testing">
     <section>
       <div class="eyebrow">Testing Roadmap</div>
-      <h2 class="sec">Categories to focus testing on.</h2>
+      <h2 class="sec">Grouped by what we're testing, not by date.</h2>
       <p class="lead">Four tests ran in 2026 and none reached significance, so measurement is the throughline. A <b>global holdout</b> tells us what lifecycle is worth over time and how that changes; <b>holdouts on every new campaign</b> read incremental lift rather than attributed revenue; and <b>existing-vs-new A/Bs</b> prove the rebuilds. Everything below is organized by the four ways we'll test.</p>
 
       <div class="tablewrap">
@@ -634,11 +624,6 @@ body.editing [contenteditable]:focus{outline:0;box-shadow:0 0 0 2px var(--accent
 
 <footer><div class="wrap">Cherokee lifecycle strategy · Prepared by Verbose Marketing for Careismatic</div></footer>
 
-<div id="editbar">
-  <span class="hint">Click any text to edit</span>
-  <button id="toggleEdit" type="button">Editing: On</button>
-  <button id="dl" type="button">Download HTML</button>
-</div>
 
 <script id="tabs-script">
 (function(){
@@ -657,43 +642,6 @@ body.editing [contenteditable]:focus{outline:0;box-shadow:0 0 0 2px var(--accent
 })();
 </script>
 
-<script id="edit-script">
-(function(){
-  var SEL = ['header.top h1','header.top .sub','.eyebrow','h2.sec','p.lead','.story p',
-    '.kpi .lab','.kpi .val','.kpi .note','.headline-find .tag','.headline-find h3','.headline-find p',
-    '.callout h5','.callout p','.seg-card h4','.theme h5','.theme p',
-    '.qw-card h4','.qw-goal','.qw-card li','.qw-tag',
-    '.swing-h','.swing-thesis','.swing-block h5','.swing-block p','.swing-block li','.swing-flag',
-    '.ttable td','.g-label','.note-box'];
-  var EDIT = [];
-  SEL.forEach(function(s){ document.querySelectorAll(s).forEach(function(el){ if(EDIT.indexOf(el)<0) EDIT.push(el); }); });
-  function setEditing(on){
-    document.body.classList.toggle('editing', on);
-    EDIT.forEach(function(el){ if(on){ el.setAttribute('contenteditable','true'); } else { el.removeAttribute('contenteditable'); } });
-    document.getElementById('toggleEdit').textContent = 'Editing: ' + (on ? 'On' : 'Off');
-  }
-  var editing = true; setEditing(true);
-  document.getElementById('toggleEdit').addEventListener('click', function(){ editing = !editing; setEditing(editing); });
-  document.getElementById('dl').addEventListener('click', function(){
-    var clone = document.documentElement.cloneNode(true);
-    var bar = clone.querySelector('#editbar'); if(bar){ bar.remove(); }
-    var es = clone.querySelector('#edit-script'); if(es){ es.remove(); }
-    clone.querySelectorAll('[contenteditable]').forEach(function(e){ e.removeAttribute('contenteditable'); });
-    var bd = clone.querySelector('body'); if(bd){ bd.classList.remove('editing'); }
-    clone.querySelectorAll('nav.tabs .tab').forEach(function(b){ b.classList.remove('active'); });
-    var ot = clone.querySelector('nav.tabs .tab[data-tab="overview"]'); if(ot){ ot.classList.add('active'); }
-    clone.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
-    var op = clone.querySelector('#overview'); if(op){ op.classList.add('active'); }
-    var out = '<!doctype html>\n' + clone.outerHTML;
-    var blob = new Blob([out], {type:'text/html'});
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
-    a.href = url; a.download = 'Cherokee Strategy Story (edited).html';
-    document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
-  });
-})();
-</script>
 
 </body>
 </html>
