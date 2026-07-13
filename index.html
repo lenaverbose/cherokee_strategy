@@ -17,13 +17,11 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Hel
 header.top{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;padding:38px 0 30px}
 header.top h1{margin:0;font-size:27px;letter-spacing:-.4px;font-weight:700}
 header.top .sub{color:#c3cbea;font-size:14px;margin-top:8px;max-width:780px}
-
 nav.tabs{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:0 1px 6px rgba(16,40,70,.05)}
 nav.tabs .wrap{display:flex;gap:2px;overflow-x:auto}
 nav.tabs .tab{font:inherit;background:none;border:0;cursor:pointer;font-size:13.5px;font-weight:600;color:var(--mut);padding:14px 16px;white-space:nowrap;border-bottom:3px solid transparent}
 nav.tabs .tab:hover{color:var(--navy)}
 nav.tabs .tab.active{color:var(--navy);border-bottom-color:var(--accent)}
-
 main .wrap{padding:10px 24px 40px}
 .panel{display:none}
 .panel.active{display:block}
@@ -35,25 +33,38 @@ p.lead{color:var(--mut);font-size:14.5px;margin:0 0 22px;max-width:820px}
 p.lead b{color:var(--ink)}
 .story p{font-size:15px;margin:0 0 14px;max-width:770px;color:#2a3345}
 .story p b{color:var(--navy)}
-
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
 .kpi{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 16px;box-shadow:var(--shadow)}
 .kpi .lab{font-size:11px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.3px}
 .kpi .val{font-size:24px;font-weight:750;margin-top:6px;letter-spacing:-.5px;color:var(--navy)}
 .kpi .note{font-size:11.5px;color:var(--mut);margin-top:4px}
-
+/* ---- three strategic pillars ---- */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0 6px}
+.pillar{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:14px;padding:20px 20px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.pillar .p-num{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--mut)}
+.pillar .p-stage{display:inline-block;align-self:flex-start;font-size:10px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;padding:3px 9px;border-radius:20px;margin:8px 0 10px;background:var(--accent-bg);color:var(--accent)}
+.pillar .p-stage.retention{background:#e6f5ee;color:var(--green)}
+.pillar .p-stage.acquisition{background:#e7e9fd;color:var(--blue)}
+.pillar .p-stage.foundation{background:#eef0f4;color:var(--slate)}
+.pillar h3{margin:0 0 8px;font-size:17px;color:var(--navy);letter-spacing:-.2px;line-height:1.25}
+.pillar .p-gap{font-size:13px;color:var(--mut);margin:0 0 12px}
+.pillar .p-gap b{color:var(--ink)}
+.pillar .p-opp{font-size:13.5px;color:#2a3345;margin:auto 0 0}
+.pillar .p-opp b{color:var(--navy)}
+.pillar .p-target{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;font-weight:600;color:var(--green)}
+.pillar .p-target.acquisition{color:var(--blue)}
+.pillar .p-target.foundation{color:var(--slate)}
+.kpi-eyebrow{font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--mut);margin:26px 0 12px}
 .headline-find{background:linear-gradient(120deg,#f3f4fc,#eef0fb);border:1px solid #d9dcf3;border-radius:14px;padding:22px 24px;margin:22px 0 6px}
 .headline-find .tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);margin-bottom:6px}
 .headline-find h3{margin:0 0 8px;font-size:19px;color:var(--navy);letter-spacing:-.3px}
 .headline-find p{margin:0;font-size:14px;color:#3a4358;max-width:800px}
 .headline-find p b{color:var(--navy)}
-
 .callout{display:flex;gap:13px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow);margin:16px 0}
 .callout .ico{flex:0 0 26px;height:26px;border-radius:7px;background:var(--accent-bg);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
 .callout.opp{border-left-color:var(--blue)} .callout.opp .ico{background:#e7e9fd;color:var(--blue)}
 .callout h5{margin:0 0 3px;font-size:14px}
 .callout p{margin:0;font-size:13.4px;color:#3d4d5c;max-width:none}
-
 /* compact segmentation boxes */
 .seg-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px}
 .seg-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
@@ -66,12 +77,10 @@ p.lead b{color:var(--ink)}
 .status{display:inline-block;font-size:9.5px;font-weight:700;padding:3px 8px;border-radius:20px;letter-spacing:.2px}
 .status.ready{background:#e6f5ee;color:var(--green)}
 .status.needsdata{background:#fdf3e3;color:var(--gold)}
-
 .themes{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px}
 .theme{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:11px;padding:14px 15px;box-shadow:var(--shadow)}
 .theme h5{margin:0 0 5px;font-size:13px;color:var(--navy)}
 .theme p{margin:0;font-size:12px;color:var(--mut);line-height:1.45}
-
 /* quick wins */
 .qw-card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px 20px;box-shadow:var(--shadow);margin-bottom:14px;display:flex;gap:16px}
 .qw-num{flex:0 0 34px;height:34px;border-radius:9px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:750;font-size:15px}
@@ -83,7 +92,6 @@ p.lead b{color:var(--ink)}
 .qw-tags{margin-top:11px;display:flex;flex-wrap:wrap;gap:6px}
 .qw-tag{font-size:10.5px;font-weight:600;background:var(--accent-bg);color:var(--accent);padding:3px 9px;border-radius:20px}
 .qw-tag.dep{background:#fdf3e3;color:var(--gold)}
-
 /* big swings (detailed) */
 .bigswing{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:14px;padding:24px 26px;box-shadow:var(--shadow);margin-bottom:22px}
 .swing-h{font-size:19px;color:var(--navy);margin:0 0 6px}
@@ -98,7 +106,6 @@ p.lead b{color:var(--ink)}
 .swing-block li b{color:var(--navy)}
 .swing-flag{background:#fff8ec;border:1px solid #f1dcae;border-radius:10px;padding:13px 16px;font-size:12.6px;color:#6d5526;margin-top:6px}
 .swing-flag b{color:#5a441c}
-
 /* testing roadmap spreadsheet */
 .tablewrap{overflow-x:auto;margin-top:8px;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
 .ttable{width:100%;min-width:820px;border-collapse:collapse;font-size:12.4px;background:var(--card)}
@@ -113,7 +120,6 @@ p.lead b{color:var(--ink)}
 .ttable .c-pri.found{color:var(--slate)}
 .ttable .c-pri.p3{color:var(--slate)}
 .ttable tr.cat td{background:var(--accent-bg);color:var(--navy);font-weight:700;text-transform:uppercase;letter-spacing:.4px;font-size:10.5px;padding:9px 12px}
-
 /* execution gantt */
 .gantt{margin-top:10px;overflow-x:auto;padding-bottom:6px}
 .gantt-inner{min-width:780px}
@@ -131,25 +137,20 @@ p.lead b{color:var(--ink)}
 .gantt-legend .lg.found::before{background:var(--slate)}
 .gantt-legend .lg.qw::before{background:var(--green)}
 .gantt-legend .lg.swing::before{background:var(--blue)}
-
 .note-box{background:#fff8ec;border:1px solid #f1dcae;border-radius:10px;padding:13px 16px;font-size:12.6px;color:#6d5526;margin-top:20px}
 .note-box b{color:#5a441c}
-
 footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);font-size:11.5px}
-@media(max-width:860px){.kpis{grid-template-columns:1fr 1fr}.seg-grid{grid-template-columns:repeat(3,1fr)}.themes{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){.pillars{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.seg-grid{grid-template-columns:repeat(3,1fr)}.themes{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.seg-grid{grid-template-columns:repeat(2,1fr)}}
-
 </style>
 </head>
 <body>
-
 <header class="top">
   <div class="wrap">
     <h1>Cherokee Lifecycle Strategy</h1>
     <div class="sub">We began with a customer journey mapping exercise to gain a high-level view of Cherokee's existing lifecycle program, from how the brand shows up in search, social, and AI, through purchase and post-purchase. This audit identifies the highest-impact opportunities to grow lifecycle revenue by rebalancing toward triggered flows, activating SMS, deepening personalization, and building loyalty.</div>
   </div>
 </header>
-
 <nav class="tabs"><div class="wrap">
   <button class="tab active" data-tab="overview" type="button">Overview</button>
   <button class="tab" data-tab="quickwins" type="button">Quick Wins</button>
@@ -157,67 +158,80 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
   <button class="tab" data-tab="testing" type="button">Testing Roadmap</button>
   <button class="tab" data-tab="execution" type="button">Execution Plan</button>
 </div></nav>
-
 <main><div class="wrap">
-
   <!-- ============ OVERVIEW ============ -->
   <div class="panel active" id="overview">
-
     <section class="story">
       <div class="eyebrow">01 · The Story</div>
-      <h2 class="sec">Automated flows earn the revenue. Campaigns take the effort.</h2>
+      <h2 class="sec">Every stage has room to improve, and retention has the most.</h2>
+      <p class="lead">There's an opportunity to grow at every stage of Cherokee's lifecycle. The most immediate one is foundational: much of the program still runs on manual batch sends that move volume without moving the number, so there's clear room to bring in e-commerce best practices. From there, the roadmap organizes around <b>three strategic themes</b>, each tied to an outcome.</p>
 
+      <div class="pillars">
+        <div class="pillar">
+          <div class="p-num">Theme 01</div>
+          <span class="p-stage foundation">Cuts across both</span>
+          <h3>Foundational e-commerce best practices</h3>
+          <p class="p-gap">High campaign volume, low impact. Triggers fire on the calendar instead of behavior, personalization is collected but unused, and testing runs inconsistently.</p>
+          <p class="p-opp">Rebuilding on automation, behavior-based triggers, and a consistent testing discipline is what makes every stage compound instead of resetting each send.</p>
+          <div class="p-target foundation">The layer that makes Themes 02 and 03 hold</div>
+        </div>
+
+        <div class="pillar">
+          <div class="p-num">Theme 02</div>
+          <span class="p-stage acquisition">Acquisition</span>
+          <h3>Increase conversion rate across leads</h3>
+          <p class="p-gap">Lead-to-order conversion is climbing (<b>19% in Jan to 27% in May</b>) but still rests on a discount-led welcome and generic first-touch messaging.</p>
+          <p class="p-opp">Personalizing the welcome to what each lead already signaled, plus a loyalty-led signup, is built to convert higher-quality leads without leaning on a flat discount.</p>
+          <div class="p-target acquisition">Target: hold above 25% as paid volume scales, then lift further</div>
+        </div>
+
+        <div class="pillar">
+          <div class="p-num">Theme 03</div>
+          <span class="p-stage retention">Retention</span>
+          <h3>Increase repeat purchase rate across customers</h3>
+          <p class="p-gap">Only <b>1 in 4 customers</b> ever places a second order, and the reorders that happen come mostly from batch campaigns rather than automated journeys.</p>
+          <p class="p-opp">Automated, personalized post-purchase, second-purchase, loyalty, and winback journeys are built to grow reorder rate, and lifetime value with it, over time.</p>
+          <div class="p-target">Target: ~25% &rarr; 30% repeat purchase rate in 12 months</div>
+        </div>
+      </div>
+
+      <div class="kpi-eyebrow">The numbers behind it</div>
       <div class="kpis">
         <div class="kpi"><div class="lab">Program revenue</div><div class="val">$1.07M</div><div class="note">Jan-May 2026 · ~$214K/mo</div></div>
-        <div class="kpi"><div class="lab">Flow revenue share</div><div class="val">74%</div><div class="note">from under 10% of sends</div></div>
+        <div class="kpi"><div class="lab">Flow revenue per send</div><div class="val">$0.88</div><div class="note">vs. $0.04 for batch campaigns</div></div>
         <div class="kpi"><div class="lab">Repeat purchase rate</div><div class="val">~25%</div><div class="note">1 in 4 customers reorder</div></div>
         <div class="kpi"><div class="lab">First order value</div><div class="val">$88</div><div class="note">median · single-order buyers</div></div>
       </div>
-
-      <p>Shift effort from manual campaigns into automation. It lowers the team's workload and compounds revenue at the same time, because a flow keeps earning without anyone hitting send.</p>
-
-      <div class="headline-find">
-        <div class="tag">The number that shapes the strategy</div>
-        <h3>Only 1 in 4 customers ever places a second order.</h3>
-        <p>Order value is healthy and holding. First orders average <b>$88</b> and blended AOV sits around <b>$114</b>, so this is not a pricing or acquisition problem. The gap is retention, and it is the single biggest lever Lifecycle can pull on the business right now. The second orders that do happen are driven mostly by batch campaigns; the bet behind this strategy is that automated, personalized, multi-channel journeys grow that rate, and lifetime value with it, over time.</p>
-      </div>
     </section>
-
     <section>
       <div class="eyebrow">02 · The Conversion Gap</div>
       <h2 class="sec">Opens beat benchmark. Clicks and revenue per send fall short.</h2>
       <p class="lead">The audience shows up. What happens after the open is where email loses ground, and SMS is already showing what the upside looks like.</p>
-
       <div class="kpis" style="grid-template-columns:repeat(3,1fr)">
         <div class="kpi"><div class="lab">Email open rate</div><div class="val">52%</div><div class="note">vs. ~38% industry norm</div></div>
         <div class="kpi"><div class="lab">Click rate</div><div class="val">0.53%</div><div class="note">vs. a 2-5% norm</div></div>
         <div class="kpi"><div class="lab">Campaign revenue / send</div><div class="val">$0.04</div><div class="note">vs. ~$0.11 benchmark</div></div>
       </div>
-
       <div class="kpis" style="grid-template-columns:repeat(3,1fr)">
         <div class="kpi"><div class="lab">SMS click rate</div><div class="val">3.0%</div><div class="note">vs. 0.53% email · clicks 5-6x harder</div></div>
         <div class="kpi"><div class="lab">SMS revenue / send</div><div class="val">$0.055</div><div class="note">vs. $0.037 for email campaigns</div></div>
         <div class="kpi"><div class="lab">SMS share of sends</div><div class="val">~9%</div><div class="note">of campaign sends · 18% of program revenue</div></div>
       </div>
-
       <div class="callout opp">
         <div class="ico">&rsaquo;</div>
         <div><h5>SMS is the proof the audience converts when the message is right.</h5>
         <p>SMS welcome earns $4.18 per recipient, cart SMS out-earns cart email $1.34 to $0.82, and SMS campaigns click at 3.0% on a fraction of the volume.</p></div>
       </div>
-
       <div class="callout opp">
         <div class="ico">&rsaquo;</div>
         <div><h5>Subject lines are winning the open. The creative and offer aren't earning the click.</h5>
         <p>This is the case for the personalization big swing: matching ad creative and product interest to the emails that follow, so what a customer already signaled shapes what they see next.</p></div>
       </div>
     </section>
-
     <section>
       <div class="eyebrow">03 · Segmentation</div>
       <h2 class="sec">The list behaves like several audiences. Today it's treated as one.</h2>
       <p class="lead">Six ways to segment that already have, or nearly have, the data behind them.</p>
-
       <div class="seg-grid">
         <div class="seg-card">
           <div class="seg-top">
@@ -226,7 +240,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           </div>
           <h4>Bulk vs. non-bulk</h4>
         </div>
-
         <div class="seg-card">
           <div class="seg-top">
             <div class="seg-ico ready" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 4 21 9 16 9"/><polyline points="3 20 3 15 8 15"/><path d="M4.5 9a7.5 7.5 0 0 1 12.4-2.8L21 9"/><path d="M3 15l4.1 3.8A7.5 7.5 0 0 0 19.5 15"/></svg></div>
@@ -234,7 +247,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           </div>
           <h4>One-time vs. repeat buyer</h4>
         </div>
-
         <div class="seg-card">
           <div class="seg-top">
             <div class="seg-ico ready" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4"/><path d="M9 11.4V18M6.4 15.2h5.2"/><circle cx="16" cy="15" r="3.4"/><path d="M18.4 12.6 21.5 9.5M18.5 9.5h3v3"/></svg></div>
@@ -242,7 +254,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           </div>
           <h4>Gender</h4>
         </div>
-
         <div class="seg-card">
           <div class="seg-top">
             <div class="seg-ico ready" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></div>
@@ -250,7 +261,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           </div>
           <h4>Tenure</h4>
         </div>
-
         <div class="seg-card">
           <div class="seg-top">
             <div class="seg-ico ready" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 6.5 12 10 4.5 14 19.5 17.5 12 21 12"/></svg></div>
@@ -258,7 +268,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           </div>
           <h4>Engagement tiers</h4>
         </div>
-
         <div class="seg-card">
           <div class="seg-top">
             <div class="seg-ico needsdata" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v5.5a4.5 4.5 0 0 0 9 0V3"/><path d="M10.5 12.9v2.3a5.3 5.3 0 0 0 10.5 0v-1"/><circle cx="21" cy="12.2" r="2"/></svg></div>
@@ -268,12 +277,10 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
         </div>
       </div>
     </section>
-
     <section>
       <div class="eyebrow">04 · What Ties It Together</div>
       <h2 class="sec">The same five threads run through all of it.</h2>
       <p class="lead">These aren't five separate problems. They're the reasons the same issues keep surfacing across different flows.</p>
-
       <div class="themes">
         <div class="theme"><h5>Personalization is missing</h5><p>Gender, color, occupation, and ad-driven intent are collected or buildable, but rarely connected to what actually gets sent.</p></div>
         <div class="theme"><h5>Triggers run on a calendar, not on behavior</h5><p>Winback's fixed clock and blanket campaign sends fire on a schedule instead of on customer behavior.</p></div>
@@ -282,18 +289,15 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
         <div class="theme"><h5>Testing is an opportunity</h5><p>A testing discipline is what keeps proving out what's working and scaling those learnings across the program.</p></div>
       </div>
     </section>
-
     <section>
       <div class="eyebrow">05 · Measurement to Track Success</div>
       <h2 class="sec">Three numbers tell us whether this is working.</h2>
       <p class="lead">Baselines come straight from the performance dashboard (Jan&ndash;May 2026). Goals are pegged to industry benchmarks or to Cherokee's own internal best.</p>
-
       <div class="headline-find">
         <div class="tag">North Star</div>
         <h3>Repeat purchase rate: ~25% today &rarr; 30% in 12 months.</h3>
         <p>Roughly <b>3 in 4 customers never place a second order</b>, and today's repeat orders come mostly from batch campaigns. As automated, personalized, multi-channel journeys take over that work, the reorder rate and median LTV (<b>$97</b> today) should climb together. With a ~55-day median reorder gap this metric moves in quarters, so progress is read against the global holdout, not month-to-month noise.</p>
       </div>
-
       <div class="tablewrap">
         <table class="ttable">
           <thead>
@@ -309,7 +313,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
             <tr>
               <td class="c-test">Post-purchase RPR</td>
               <td>$0.22, on a 41&ndash;43% open audience</td>
-              <td>$0.60 (roughly 3x, still under the $1.71 the checkout flow already earns)</td>
+              <td>$0.60</td>
               <td>New post-purchase flow</td>
             </tr>
             <tr>
@@ -321,19 +325,15 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           </tbody>
         </table>
       </div>
-
       <div class="note-box"><b>How this gets reported:</b> the global holdout, campaign holdouts, and existing-vs-new A/Bs in the Testing Roadmap all feed these three numbers, so the before/after story stays grounded in incremental lift rather than attributed revenue.</div>
     </section>
-
   </div>
-
   <!-- ============ QUICK WINS ============ -->
   <div class="panel" id="quickwins">
     <section>
       <div class="eyebrow">Quick Wins</div>
       <h2 class="sec">Five moves that tune what already works.</h2>
       <p class="lead">In priority order, and testing sits underneath all of them.</p>
-
       <div class="qw-card">
         <div class="qw-num">1</div>
         <div class="qw-body">
@@ -351,7 +351,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           <div class="qw-tags"><span class="qw-tag">Metric: post-purchase RPR</span><span class="qw-tag">Segment: first-time vs. repeat</span><span class="qw-tag">Segment: bulk vs. non-bulk</span></div>
         </div>
       </div>
-
       <div class="qw-card">
         <div class="qw-num">2</div>
         <div class="qw-body">
@@ -366,7 +365,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           <div class="qw-tags"><span class="qw-tag">Metric: lead conversion</span><span class="qw-tag">Test: welcome messaging</span><span class="qw-tag">Test: cross-brand promotion</span><span class="qw-tag dep">Depends on: loyalty live</span></div>
         </div>
       </div>
-
       <div class="qw-card">
         <div class="qw-num">3</div>
         <div class="qw-body">
@@ -381,7 +379,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           <div class="qw-tags"><span class="qw-tag">Metric: repeat purchase rate</span><span class="qw-tag">Test: reason-to-buy messaging</span><span class="qw-tag dep">Depends on: loyalty live</span></div>
         </div>
       </div>
-
       <div class="qw-card">
         <div class="qw-num">4</div>
         <div class="qw-body">
@@ -397,7 +394,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           <div class="qw-tags"><span class="qw-tag">Test: UGC, fit, reviews</span><span class="qw-tag">Test: SMS frequency</span></div>
         </div>
       </div>
-
       <div class="qw-card">
         <div class="qw-num">5</div>
         <div class="qw-body">
@@ -413,18 +409,15 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
       </div>
     </section>
   </div>
-
   <!-- ============ BIG SWINGS ============ -->
   <div class="panel" id="bigswings">
     <section>
       <div class="eyebrow">Big Swings</div>
       <h2 class="sec">Two structural bets behind the retention and personalization gaps.</h2>
       <p class="lead">Higher lift and higher ceiling than the quick wins. Both cut across more than one flow and need buy-in beyond Lifecycle.</p>
-
       <div class="bigswing">
         <h3 class="swing-h">1 · Loyalty program, built as the DTC moat</h3>
         <p class="swing-thesis">Cherokee can't beat Amazon on speed or price. The reason to buy direct has to be <b>community and belonging</b>. That makes loyalty the moat, so the move is to take it from a side program to the front door of the whole experience, and build it around the grassroots healthcare-worker identity that already makes Nurses Week work.</p>
-
         <div class="swing-block">
           <h5>Make loyalty the way in</h5>
           <ul>
@@ -433,7 +426,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
             <li>Use signup to build a profile: name, phone, and one zero-party question, occupation, that we can personalize on later.</li>
           </ul>
         </div>
-
         <div class="swing-block">
           <h5>Reward the behaviors that predict LTV</h5>
           <ul>
@@ -442,7 +434,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
             <li>Build a structured refer-a-friend and UGC capture program inside it, since word of mouth is the top acquisition channel and this feeds it at low cost.</li>
           </ul>
         </div>
-
         <div class="swing-block">
           <h5>Embed it across every flow, not one tab</h5>
           <ul>
@@ -451,7 +442,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
             <li>Winback can lead with "you have $X in rewards" as an alternative to a fresh discount.</li>
           </ul>
         </div>
-
         <div class="swing-block">
           <h5>The community and mission angle</h5>
           <ul>
@@ -459,14 +449,11 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
             <li>Turn reviews and five-star signals into a flywheel: incentivize the behaviors with points, then use the signal to trigger the next relevant message.</li>
           </ul>
         </div>
-
         <div class="swing-flag"><b>What it needs:</b> this is cross-functional with product and site teams, because it changes signup capability and loyalty exposure, not just email. Tiering (flat vs. tiered, and milestone or career-anniversary tiers that would need a profession or tenure field) is not defined yet, so recommend a scoped loyalty PRD kickoff before build.</div>
       </div>
-
       <div class="bigswing">
         <h3 class="swing-h">2 · Personalization by persona</h3>
         <p class="swing-thesis">When someone enters lifecycle, all we keep is an email address, even though they already told us a lot by <b>which ad they clicked</b>. The bet is to close the gap between paid media and lifecycle, so what a customer signaled up front shapes the messaging they get next, not just the product but the reason they were interested.</p>
-
         <div class="swing-block">
           <h5>Read the ad, not just the click</h5>
           <ul>
@@ -474,7 +461,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
             <li>UTMs alone only give lead source. The value is understanding what is actually in the ad, which is what the classifier adds.</li>
           </ul>
         </div>
-
         <div class="swing-block">
           <h5>Thread it into lifecycle</h5>
           <ul>
@@ -482,12 +468,10 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
             <li>Route by persona: deal-seekers see offers, explorers see product discovery and new arrivals. If a cohort isn't made of deal-seekers, we may not need to discount them at all.</li>
           </ul>
         </div>
-
         <div class="swing-block">
           <h5>Weight the signals over time</h5>
           <p>At signup, weight the ad context heavily, because there's no lifecycle behavior yet. As someone purchases and engages, shift the weight toward their own behavior, with the model's confidence scores adjusting as more signal comes in.</p>
         </div>
-
         <div class="swing-block">
           <h5>How we start</h5>
           <ul>
@@ -495,7 +479,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
             <li>Work with New Engen on ad taxonomies and UTMs so this can scale beyond the MVP.</li>
           </ul>
         </div>
-
         <div class="swing-block">
           <h5>The further horizon</h5>
           <ul>
@@ -503,26 +486,22 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
             <li><b>Catalog-wide color and product personalization:</b> someone required to wear one color sees only that color, while explorers see the range. This needs a color-level product catalog built first.</li>
           </ul>
         </div>
-
         <div class="swing-flag"><b>What it needs:</b> cross-functional buy-in from paid media (New Engen) and product, the classifier MVP moving from prototype to production, and an agreed ad taxonomy and UTM structure so persona fields scale beyond the first manual list.</div>
       </div>
     </section>
   </div>
-
   <!-- ============ TESTING ROADMAP ============ -->
   <div class="panel" id="testing">
     <section>
       <div class="eyebrow">Testing Roadmap</div>
       <h2 class="sec">Grouped by category.</h2>
       <p class="lead">Four tests ran in 2026 and none reached significance, so measurement is the throughline. A <b>global holdout</b> tells us what lifecycle is worth over time and how that changes; <b>holdouts on every new campaign</b> read incremental lift rather than attributed revenue; and <b>existing-vs-new A/Bs</b> prove the rebuilds. Everything below is organized by the four ways we'll test.</p>
-
       <div class="tablewrap">
         <table class="ttable">
           <thead>
             <tr><th>Test</th><th>Area</th><th>What we're testing</th><th>Primary metric</th><th>Effort</th><th>Priority</th></tr>
           </thead>
           <tbody>
-
             <tr class="cat"><td colspan="6">Net new campaigns &amp; flows</td></tr>
             <tr>
               <td class="c-test">New post-purchase flow</td>
@@ -548,7 +527,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td class="c-pri p2">Medium</td>
               <td class="c-pri p2">P2</td>
             </tr>
-
             <tr class="cat"><td colspan="6">Holdouts &amp; incrementality</td></tr>
             <tr>
               <td class="c-test">Global lifecycle holdout</td>
@@ -582,7 +560,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td class="c-pri p2">Medium</td>
               <td class="c-pri p1">P1</td>
             </tr>
-
             <tr class="cat"><td colspan="6">Updates to existing flows</td></tr>
             <tr>
               <td class="c-test">Non-price abandonment messaging</td>
@@ -608,7 +585,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td class="c-pri p2">Medium</td>
               <td class="c-pri p2">P2</td>
             </tr>
-
             <tr class="cat"><td colspan="6">Messaging tests</td></tr>
             <tr>
               <td class="c-test">Reason-to-buy</td>
@@ -650,38 +626,31 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td class="c-pri p2">Medium</td>
               <td class="c-pri p3">P3</td>
             </tr>
-
           </tbody>
         </table>
       </div>
-
       <div class="note-box"><b>Feeds the dashboard:</b> the global holdout, new-campaign holdouts, and existing-vs-new results all report into the reporting dashboard, so incremental lift and lifecycle's impact over time stay visible, not just Klaviyo-attributed revenue.</div>
     </section>
   </div>
-
   <!-- ============ EXECUTION PLAN ============ -->
   <div class="panel" id="execution">
     <section>
       <div class="eyebrow">Execution Plan</div>
       <h2 class="sec">What we're working on over time.</h2>
       <p class="lead">The bars show when each initiative is in flight across the first twelve weeks, grouped into three phases. Planning for the bigger rebuilds starts in weeks 1-4 so nothing kicks off cold, and the big swings land once their dependencies are in place. Timeframes are a starting point to adjust against bandwidth and the loyalty launch date.</p>
-
       <div class="gantt"><div class="gantt-inner">
-
         <div class="gantt-phase">
           <div class="g-corner"></div>
           <div class="g-phase p1" style="grid-column:2 / 6">Phase 1 · Foundations (0-30 days)</div>
           <div class="g-phase p2" style="grid-column:6 / 10">Phase 2 · Core flows (30-60 days)</div>
           <div class="g-phase p3" style="grid-column:10 / 14">Phase 3 · Big swings (60-90+ days)</div>
         </div>
-
         <div class="gantt-weeks">
           <div class="g-corner"></div>
           <div class="wk">W1</div><div class="wk">W2</div><div class="wk">W3</div><div class="wk">W4</div>
           <div class="wk">W5</div><div class="wk">W6</div><div class="wk">W7</div><div class="wk">W8</div>
           <div class="wk">W9</div><div class="wk">W10</div><div class="wk">W11</div><div class="wk">W12</div>
         </div>
-
         <div class="gantt-row"><div class="g-label">Testing framework</div><div class="g-bar found" style="grid-column:2 / 6">Stand up</div></div>
         <div class="gantt-row"><div class="g-label">Welcome flow filter fix</div><div class="g-bar qw" style="grid-column:2 / 4">Fix</div></div>
         <div class="gantt-row"><div class="g-label">SMS on abandoned checkout</div><div class="g-bar qw" style="grid-column:2 / 4">Add</div></div>
@@ -695,24 +664,17 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
         <div class="gantt-row"><div class="g-label">Persona personalization</div><div class="g-bar swing" style="grid-column:6 / 10">Manual pilot</div><div class="g-bar swing" style="grid-column:10 / 14">MVP + test</div></div>
         <div class="gantt-row"><div class="g-label">Loyalty program launch</div><div class="g-bar swing" style="grid-column:9 / 14">Launch + embed</div></div>
         <div class="gantt-row"><div class="g-label">Refer-a-friend + UGC capture</div><div class="g-bar swing" style="grid-column:11 / 14">Build</div></div>
-
       </div></div>
-
       <div class="gantt-legend">
         <span class="lg found">Foundation &amp; planning</span>
         <span class="lg qw">Flow builds &amp; tests</span>
         <span class="lg swing">Big swings</span>
       </div>
-
       <div class="note-box"><b>Dependencies to watch:</b> the loyalty launch gates the loyalty mentions in welcome, second-purchase, and post-purchase, plus the donate-points test. Occupation capture has to ship before profession-based personalization and the "profession" segment go live. The testing framework underpins every test in the roadmap, which is why it sits in week one. <b>Where the big swings ride along with earlier work:</b> occupation capture feeds both loyalty tiers and persona routing, the onboarding revamp is where loyalty-led welcome content lands once the program is live, and the manual persona pilot reuses the welcome and abandonment messaging tests rather than needing net-new builds.</div>
     </section>
   </div>
-
 </div></main>
-
 <footer><div class="wrap">Cherokee lifecycle strategy · Prepared by Verbose Marketing for Careismatic</div></footer>
-
-
 <script id="tabs-script">
 (function(){
   var tabs = document.querySelectorAll('nav.tabs .tab');
@@ -729,7 +691,5 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
   });
 })();
 </script>
-
-
 </body>
 </html>
