@@ -55,7 +55,7 @@ p.lead b{color:var(--ink)}
 .callout p{margin:0;font-size:13.4px;color:#3d4d5c;max-width:none}
 
 /* compact segmentation boxes */
-.seg-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px}
+.seg-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px}
 .seg-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
 .seg-top{display:flex;align-items:center;justify-content:space-between}
 .seg-ico{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center}
@@ -146,8 +146,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
 <header class="top">
   <div class="wrap">
     <h1>Cherokee Lifecycle Strategy</h1>
-    <div class="sub">We began with a customer journey mapping exercise to gain a high-level view of Cherokee's existing lifecycle program, from how the brand shows up in search, social, and AI, through purchase and post-purchase. This audit identifies the highest-impact opportunities to grow lifecycle revenue by rebalancing toward triggered flows, activating SMS, deepening personalization, and building loyalty.
-.</div>
+    <div class="sub">We began with a customer journey mapping exercise to gain a high-level view of Cherokee's existing lifecycle program, from how the brand shows up in search, social, and AI, through purchase and post-purchase. This audit identifies the highest-impact opportunities to grow lifecycle revenue by rebalancing toward triggered flows, activating SMS, deepening personalization, and building loyalty.</div>
   </div>
 </header>
 
@@ -180,19 +179,31 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
       <div class="headline-find">
         <div class="tag">The number that shapes the strategy</div>
         <h3>Only 1 in 4 customers ever places a second order.</h3>
-        <p>Order value is healthy and holding. First orders average <b>$88</b> and blended AOV sits around <b>$114</b>, so this is not a pricing or acquisition problem. The gap is retention, and it is the single biggest lever Lifecycle can pull on the business right now.</p>
+        <p>Order value is healthy and holding. First orders average <b>$88</b> and blended AOV sits around <b>$114</b>, so this is not a pricing or acquisition problem. The gap is retention, and it is the single biggest lever Lifecycle can pull on the business right now. The second orders that do happen are driven mostly by batch campaigns; the bet behind this strategy is that automated, personalized, multi-channel journeys grow that rate, and lifetime value with it, over time.</p>
       </div>
     </section>
 
     <section>
       <div class="eyebrow">02 · The Conversion Gap</div>
       <h2 class="sec">Opens beat benchmark. Clicks and revenue per send fall short.</h2>
-      <p class="lead">The audience shows up. What happens after the open is where the program loses ground.</p>
+      <p class="lead">The audience shows up. What happens after the open is where email loses ground, and SMS is already showing what the upside looks like.</p>
 
       <div class="kpis" style="grid-template-columns:repeat(3,1fr)">
         <div class="kpi"><div class="lab">Email open rate</div><div class="val">52%</div><div class="note">vs. ~38% industry norm</div></div>
         <div class="kpi"><div class="lab">Click rate</div><div class="val">0.53%</div><div class="note">vs. a 2-5% norm</div></div>
         <div class="kpi"><div class="lab">Campaign revenue / send</div><div class="val">$0.04</div><div class="note">vs. ~$0.11 benchmark</div></div>
+      </div>
+
+      <div class="kpis" style="grid-template-columns:repeat(3,1fr)">
+        <div class="kpi"><div class="lab">SMS click rate</div><div class="val">3.0%</div><div class="note">vs. 0.53% email · clicks 5-6x harder</div></div>
+        <div class="kpi"><div class="lab">SMS revenue / send</div><div class="val">$0.055</div><div class="note">vs. $0.037 for email campaigns</div></div>
+        <div class="kpi"><div class="lab">SMS share of sends</div><div class="val">~9%</div><div class="note">of campaign sends · 18% of program revenue</div></div>
+      </div>
+
+      <div class="callout opp">
+        <div class="ico">&rsaquo;</div>
+        <div><h5>SMS is the proof the audience converts when the message is right.</h5>
+        <p>SMS welcome earns $4.18 per recipient, cart SMS out-earns cart email $1.34 to $0.82, and SMS campaigns click at 3.0% on a fraction of the volume.</p></div>
       </div>
 
       <div class="callout opp">
@@ -205,7 +216,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
     <section>
       <div class="eyebrow">03 · Segmentation</div>
       <h2 class="sec">The list behaves like several audiences. Today it's treated as one.</h2>
-      <p class="lead">Five ways to segment that already have, or nearly have, the data behind them.</p>
+      <p class="lead">Six ways to segment that already have, or nearly have, the data behind them.</p>
 
       <div class="seg-grid">
         <div class="seg-card">
@@ -242,6 +253,14 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
 
         <div class="seg-card">
           <div class="seg-top">
+            <div class="seg-ico ready" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 6.5 12 10 4.5 14 19.5 17.5 12 21 12"/></svg></div>
+            <span class="status ready">Ready now</span>
+          </div>
+          <h4>Engagement tiers</h4>
+        </div>
+
+        <div class="seg-card">
+          <div class="seg-top">
             <div class="seg-ico needsdata" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v5.5a4.5 4.5 0 0 0 9 0V3"/><path d="M10.5 12.9v2.3a5.3 5.3 0 0 0 10.5 0v-1"/><circle cx="21" cy="12.2" r="2"/></svg></div>
             <span class="status needsdata">Needs data</span>
           </div>
@@ -264,6 +283,48 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
       </div>
     </section>
 
+    <section>
+      <div class="eyebrow">05 · Measurement to Track Success</div>
+      <h2 class="sec">Three numbers tell us whether this is working.</h2>
+      <p class="lead">Baselines come straight from the performance dashboard (Jan&ndash;May 2026). Goals are pegged to industry benchmarks or to Cherokee's own internal best.</p>
+
+      <div class="headline-find">
+        <div class="tag">North Star</div>
+        <h3>Repeat purchase rate: ~25% today &rarr; 30% in 12 months.</h3>
+        <p>Roughly <b>3 in 4 customers never place a second order</b>, and today's repeat orders come mostly from batch campaigns. As automated, personalized, multi-channel journeys take over that work, the reorder rate and median LTV (<b>$97</b> today) should climb together. With a ~55-day median reorder gap this metric moves in quarters, so progress is read against the global holdout, not month-to-month noise.</p>
+      </div>
+
+      <div class="tablewrap">
+        <table class="ttable">
+          <thead>
+            <tr><th>Metric</th><th>Today</th><th>Goal</th><th>Moved by</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c-test">Repeat purchase rate</td>
+              <td>~25%</td>
+              <td>30% in 12 months</td>
+              <td>Post-purchase, second-purchase, loyalty, winback</td>
+            </tr>
+            <tr>
+              <td class="c-test">Post-purchase RPR</td>
+              <td>$0.22, on a 41&ndash;43% open audience</td>
+              <td>$0.60 (roughly 3x, still under the $1.71 the checkout flow already earns)</td>
+              <td>New post-purchase flow</td>
+            </tr>
+            <tr>
+              <td class="c-test">Lead conversion (month-0 lead&rarr;order)</td>
+              <td>26.7% in May, up from 19.0% in Jan</td>
+              <td>Hold above 25% as paid volume scales, rising as campaign personalization compounds</td>
+              <td>Loyalty popup, personalized welcome, persona routing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box"><b>How this gets reported:</b> the global holdout, campaign holdouts, and existing-vs-new A/Bs in the Testing Roadmap all feed these three numbers, so the before/after story stays grounded in incremental lift rather than attributed revenue.</div>
+    </section>
+
   </div>
 
   <!-- ============ QUICK WINS ============ -->
@@ -271,21 +332,23 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
     <section>
       <div class="eyebrow">Quick Wins</div>
       <h2 class="sec">Five moves that tune what already works.</h2>
-      <p class="lead">In priority order and testing sits underneath all of them.</p>
+      <p class="lead">In priority order, and testing sits underneath all of them.</p>
 
       <div class="qw-card">
         <div class="qw-num">1</div>
         <div class="qw-body">
           <h4>Build a new post-purchase flow</h4>
-          <div class="qw-goal">Goal: reduce returns and build trust ahead of the second purchase.</div>
+          <div class="qw-goal">Goal: lift post-purchase RPR from $0.22 toward $0.60 and set up the second purchase.</div>
           <ul>
-            <li>A "how it fits" check-in once the product has landed.</li>
-            <li>How to care for it, and how to wear it.</li>
+            <li>A branded order confirmation replacing the default transactional template, which wastes an 80-90% open moment today.</li>
+            <li>A "how it fits" check-in once the product has landed, plus how to care for it and how to wear it.</li>
+            <li>A review request 10-14 days after delivery, once an opinion has formed.</li>
             <li>Set a replenishment expectation early, framed as building out a rotation rather than a literal refill.</li>
             <li>Embed reviews and UGC of real people wearing Cherokee.</li>
             <li>Introduce a cross-sell where it makes sense, aimed at single-item buyers, not people who already bought a full set.</li>
+            <li>Exit logic: anyone who starts a return or refund leaves the flow immediately.</li>
           </ul>
-          <div class="qw-tags"><span class="qw-tag">Segment: first-time vs. repeat</span><span class="qw-tag">Segment: bulk vs. non-bulk</span></div>
+          <div class="qw-tags"><span class="qw-tag">Metric: post-purchase RPR</span><span class="qw-tag">Segment: first-time vs. repeat</span><span class="qw-tag">Segment: bulk vs. non-bulk</span></div>
         </div>
       </div>
 
@@ -300,7 +363,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
             <li>Lead with product value and the brand differentiator, and bring the brand story in.</li>
             <li>Introduce the loyalty program here once it's live.</li>
           </ul>
-          <div class="qw-tags"><span class="qw-tag">Test: welcome messaging</span><span class="qw-tag">Test: cross-brand promotion</span><span class="qw-tag dep">Depends on: loyalty live</span></div>
+          <div class="qw-tags"><span class="qw-tag">Metric: lead conversion</span><span class="qw-tag">Test: welcome messaging</span><span class="qw-tag">Test: cross-brand promotion</span><span class="qw-tag dep">Depends on: loyalty live</span></div>
         </div>
       </div>
 
@@ -308,14 +371,14 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
         <div class="qw-num">3</div>
         <div class="qw-body">
           <h4>Revamp the second-purchase flow</h4>
-          <div class="qw-goal">Goal: increase reorder rate by make the second purchase feel relevant to them.</div>
+          <div class="qw-goal">Goal: increase reorder rate by making the second purchase feel relevant to them.</div>
           <ul>
             <li>Trigger on order quantity plus elapsed time, not a fixed date. Someone who bought one set is a different conversation than someone who bought four.</li>
             <li>Test reasons to keep buying: an outfit for every day of the week, expanding colors, matching pieces together.</li>
             <li>Personalize by behavior: whether they returned, whether they reviewed, and whether they were happy.</li>
             <li>Lean into loyalty's mission and community angle once live, and lead with product value over collections.</li>
           </ul>
-          <div class="qw-tags"><span class="qw-tag">Test: reason-to-buy messaging</span><span class="qw-tag dep">Depends on: loyalty live</span></div>
+          <div class="qw-tags"><span class="qw-tag">Metric: repeat purchase rate</span><span class="qw-tag">Test: reason-to-buy messaging</span><span class="qw-tag dep">Depends on: loyalty live</span></div>
         </div>
       </div>
 
@@ -328,7 +391,8 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
             <li>Test UGC content and messaging that helps people settle fit and sizing.</li>
             <li>Test customer reviews and star ratings in the flow.</li>
             <li>Test product education that speaks to what makes Cherokee different.</li>
-            <li>Expand SMS: test frequency and messaging for high-intent customers, starting with abandoned checkout, which has none today.</li>
+            <li>Confirm whether browse abandonment is pulling dynamic recently-viewed products or a static block, and keep its touch lighter than cart.</li>
+            <li>Expand SMS: test frequency and messaging for high-intent customers, starting with abandoned checkout, which has none today. Cart SMS already out-earns cart email $1.34 to $0.82 per recipient.</li>
           </ul>
           <div class="qw-tags"><span class="qw-tag">Test: UGC, fit, reviews</span><span class="qw-tag">Test: SMS frequency</span></div>
         </div>
@@ -340,11 +404,11 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           <h4>Reframe the winback</h4>
           <div class="qw-goal">Goal: increase repurchase rate by triggering on behavior, not the calendar.</div>
           <ul>
-            <li>Use behavior-based triggers and exit logic instead of a fixed timer.</li>
-            <li>Test messaging to learn what resonates.</li>
-            <li>Segment lapsed customers and talk to each differently, not one message for everyone.</li>
+            <li>Enter through Klaviyo's existing predictive segments (at risk, inactive) rather than a hand-built timer, with exit logic when someone buys.</li>
+            <li>Escalate messaging before escalating discount: the first touch reminds and resurfaces relevant products, the incentive comes second, a deadline third, so the best customers aren't trained to wait for a code.</li>
+            <li>Segment lapsed customers and talk to each differently: a one-time buyer who never returned is a different conversation than a loyal customer gone quiet.</li>
           </ul>
-          <div class="qw-tags"><span class="qw-tag">Test: winback messaging</span><span class="qw-tag">Segment: lapsed by history</span></div>
+          <div class="qw-tags"><span class="qw-tag">Metric: repeat purchase rate</span><span class="qw-tag">Test: winback messaging</span><span class="qw-tag">Segment: lapsed by history</span></div>
         </div>
       </div>
     </section>
@@ -440,7 +504,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
           </ul>
         </div>
 
-        <div class="swing-flag"><b>What it needs:</b> cross-functional with paid media (New Engen) and product. </div>
+        <div class="swing-flag"><b>What it needs:</b> cross-functional buy-in from paid media (New Engen) and product, the classifier MVP moving from prototype to production, and an agreed ad taxonomy and UTM structure so persona fields scale beyond the first manual list.</div>
       </div>
     </section>
   </div>
@@ -455,16 +519,17 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
       <div class="tablewrap">
         <table class="ttable">
           <thead>
-            <tr><th>Test</th><th>Area</th><th>What we're testing</th><th>Primary metric</th><th>Priority</th></tr>
+            <tr><th>Test</th><th>Area</th><th>What we're testing</th><th>Primary metric</th><th>Effort</th><th>Priority</th></tr>
           </thead>
           <tbody>
 
-            <tr class="cat"><td colspan="5">Net new campaigns &amp; flows</td></tr>
+            <tr class="cat"><td colspan="6">Net new campaigns &amp; flows</td></tr>
             <tr>
               <td class="c-test">New post-purchase flow</td>
               <td>Post-purchase</td>
               <td>Does a full flow (fit check-in, care, replenishment, UGC) beat today's two-email, day-14 sequence.</td>
-              <td>30-day return rate, second-order rate</td>
+              <td>Post-purchase RPR, second-order rate</td>
+              <td class="c-pri p2">Medium</td>
               <td class="c-pri p1">P1</td>
             </tr>
             <tr>
@@ -472,6 +537,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td>Abandoned checkout</td>
               <td>Does adding SMS, which the flow has none of today, recover checkouts email alone misses.</td>
               <td>Recovery rate</td>
+              <td class="c-pri p1">Quick win</td>
               <td class="c-pri p1">P1</td>
             </tr>
             <tr>
@@ -479,15 +545,17 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td>Second purchase</td>
               <td>A new flow triggered on order quantity plus elapsed time, framed as building a rotation.</td>
               <td>Reorder rate</td>
+              <td class="c-pri p2">Medium</td>
               <td class="c-pri p2">P2</td>
             </tr>
 
-            <tr class="cat"><td colspan="5">Holdouts &amp; incrementality</td></tr>
+            <tr class="cat"><td colspan="6">Holdouts &amp; incrementality</td></tr>
             <tr>
               <td class="c-test">Global lifecycle holdout</td>
               <td>Program-wide</td>
               <td>A group held out of all lifecycle sends, so we can read lifecycle's total incremental impact and watch it change over time.</td>
               <td>Incremental revenue vs. holdout</td>
+              <td class="c-pri p1">Quick win</td>
               <td class="c-pri found">Always-on</td>
             </tr>
             <tr>
@@ -495,22 +563,33 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td>Every new campaign</td>
               <td>Each new campaign launches with a holdout, so we measure incremental lift instead of attributed revenue.</td>
               <td>Incremental lift</td>
+              <td class="c-pri p1">Quick win</td>
               <td class="c-pri found">Standard</td>
+            </tr>
+            <tr>
+              <td class="c-test">Attribution validation</td>
+              <td>Welcome + abandonment</td>
+              <td>After the welcome flow filter ships, recheck the flow revenue split (30 days, 200+ triggers) before judging other flow changes.</td>
+              <td>Flow revenue split</td>
+              <td class="c-pri p1">Quick win</td>
+              <td class="c-pri p1">P1</td>
             </tr>
             <tr>
               <td class="c-test">Existing vs. new (A/B)</td>
               <td>Rebuilt flows &amp; templates</td>
               <td>Test each rebuild against the current version, including slice-image emails vs. the EDS live-text build.</td>
               <td>Conversion, revenue per recipient</td>
+              <td class="c-pri p2">Medium</td>
               <td class="c-pri p1">P1</td>
             </tr>
 
-            <tr class="cat"><td colspan="5">Updates to existing flows</td></tr>
+            <tr class="cat"><td colspan="6">Updates to existing flows</td></tr>
             <tr>
               <td class="c-test">Non-price abandonment messaging</td>
               <td>Abandoned cart / checkout</td>
               <td>Add reviews, fit, and guarantees to a touch that only answers price today.</td>
               <td>Cart-to-order conversion</td>
+              <td class="c-pri p1">Quick win</td>
               <td class="c-pri p1">P1</td>
             </tr>
             <tr>
@@ -518,6 +597,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td>Onboarding / welcome</td>
               <td>Replace discount-led welcome content with collection education and brand value.</td>
               <td>Welcome-to-first-order</td>
+              <td class="c-pri p2">Medium</td>
               <td class="c-pri p1">P1</td>
             </tr>
             <tr>
@@ -525,15 +605,17 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td>Campaigns</td>
               <td>Segment blasts by color and purchase history instead of one-size-fits-all sends.</td>
               <td>Revenue per send</td>
+              <td class="c-pri p2">Medium</td>
               <td class="c-pri p2">P2</td>
             </tr>
 
-            <tr class="cat"><td colspan="5">Messaging tests</td></tr>
+            <tr class="cat"><td colspan="6">Messaging tests</td></tr>
             <tr>
               <td class="c-test">Reason-to-buy</td>
               <td>Second purchase</td>
               <td>"An outfit for the week" vs. "expand your colors" vs. "match your pieces."</td>
               <td>Reorder rate</td>
+              <td class="c-pri p1">Quick win</td>
               <td class="c-pri p2">P2</td>
             </tr>
             <tr>
@@ -541,6 +623,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td>Winback</td>
               <td>Lapsed one-time vs. former repeat buyers, messaged differently rather than one-size-fits-all.</td>
               <td>Reactivation rate</td>
+              <td class="c-pri p2">Medium</td>
               <td class="c-pri p2">P2</td>
             </tr>
             <tr>
@@ -548,6 +631,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td>Acquisition</td>
               <td>The offer for joining loyalty vs. a flat code in the popup. Runs once loyalty is live.</td>
               <td>Signup-to-first-order</td>
+              <td class="c-pri p3">Large</td>
               <td class="c-pri p2">P2</td>
             </tr>
             <tr>
@@ -555,6 +639,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td>Cross-flow</td>
               <td>Route by ad-derived persona: deal-seekers see offers, explorers see discovery.</td>
               <td>Conversion by persona</td>
+              <td class="c-pri p3">Large</td>
               <td class="c-pri p3">P3</td>
             </tr>
             <tr>
@@ -562,6 +647,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
               <td>Onboarding / browse</td>
               <td>Introduce Healing Hands to explorers Cherokee doesn't fit.</td>
               <td>Cross-brand conversion</td>
+              <td class="c-pri p2">Medium</td>
               <td class="c-pri p3">P3</td>
             </tr>
 
@@ -578,7 +664,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
     <section>
       <div class="eyebrow">Execution Plan</div>
       <h2 class="sec">What we're working on over time.</h2>
-      <p class="lead">The bars show when each initiative is in flight across the first twelve weeks, grouped into three phases. Foundations and the top quick win come first; the big swings land once their dependencies are in place. Timeframes are a starting point to adjust against bandwidth and the loyalty launch date.</p>
+      <p class="lead">The bars show when each initiative is in flight across the first twelve weeks, grouped into three phases. Planning for the bigger rebuilds starts in weeks 1-4 so nothing kicks off cold, and the big swings land once their dependencies are in place. Timeframes are a starting point to adjust against bandwidth and the loyalty launch date.</p>
 
       <div class="gantt"><div class="gantt-inner">
 
@@ -597,27 +683,28 @@ footer{border-top:1px solid var(--line);padding:22px 0 44px;color:var(--mut);fon
         </div>
 
         <div class="gantt-row"><div class="g-label">Testing framework</div><div class="g-bar found" style="grid-column:2 / 6">Stand up</div></div>
-        <div class="gantt-row"><div class="g-label">New post-purchase flow</div><div class="g-bar qw" style="grid-column:2 / 5">Build</div></div>
         <div class="gantt-row"><div class="g-label">Welcome flow filter fix</div><div class="g-bar qw" style="grid-column:2 / 4">Fix</div></div>
         <div class="gantt-row"><div class="g-label">SMS on abandoned checkout</div><div class="g-bar qw" style="grid-column:2 / 4">Add</div></div>
+        <div class="gantt-row"><div class="g-label">New post-purchase flow</div><div class="g-bar qw" style="grid-column:2 / 5">Build</div></div>
         <div class="gantt-row"><div class="g-label">Occupation capture at signup</div><div class="g-bar qw" style="grid-column:3 / 5">Ship</div></div>
-        <div class="gantt-row"><div class="g-label">Onboarding revamp</div><div class="g-bar qw" style="grid-column:5 / 9">Rebuild + test</div></div>
-        <div class="gantt-row"><div class="g-label">Second-purchase flow rebuild</div><div class="g-bar qw" style="grid-column:6 / 10">Rebuild + test</div></div>
-        <div class="gantt-row"><div class="g-label">Abandoned-flow testing</div><div class="g-bar qw" style="grid-column:6 / 11">Test program</div></div>
-        <div class="gantt-row"><div class="g-label">Winback reframe</div><div class="g-bar qw" style="grid-column:7 / 11">Rebuild + test</div></div>
+        <div class="gantt-row"><div class="g-label">Abandonment email module test (UGC / reviews / fit copy)</div><div class="g-bar qw" style="grid-column:3 / 6">Module swap on EDS</div></div>
+        <div class="gantt-row"><div class="g-label">Onboarding revamp</div><div class="g-bar found" style="grid-column:2 / 6">Plan</div><div class="g-bar qw" style="grid-column:6 / 10">Rebuild + test</div></div>
+        <div class="gantt-row"><div class="g-label">Second-purchase flow rebuild</div><div class="g-bar found" style="grid-column:2 / 6">Plan</div><div class="g-bar qw" style="grid-column:7 / 11">Rebuild + test</div></div>
+        <div class="gantt-row"><div class="g-label">Abandoned-flow testing (full program)</div><div class="g-bar qw" style="grid-column:6 / 11">Test program</div></div>
+        <div class="gantt-row"><div class="g-label">Winback reframe</div><div class="g-bar found" style="grid-column:2 / 6">Plan</div><div class="g-bar qw" style="grid-column:8 / 11">Rebuild + test</div></div>
+        <div class="gantt-row"><div class="g-label">Persona personalization</div><div class="g-bar swing" style="grid-column:6 / 10">Manual pilot</div><div class="g-bar swing" style="grid-column:10 / 14">MVP + test</div></div>
         <div class="gantt-row"><div class="g-label">Loyalty program launch</div><div class="g-bar swing" style="grid-column:9 / 14">Launch + embed</div></div>
         <div class="gantt-row"><div class="g-label">Refer-a-friend + UGC capture</div><div class="g-bar swing" style="grid-column:11 / 14">Build</div></div>
-        <div class="gantt-row"><div class="g-label">Persona personalization MVP</div><div class="g-bar swing" style="grid-column:10 / 14">MVP + test</div></div>
 
       </div></div>
 
       <div class="gantt-legend">
-        <span class="lg found">Foundation</span>
-        <span class="lg qw">Quick win</span>
-        <span class="lg swing">Big swing</span>
+        <span class="lg found">Foundation &amp; planning</span>
+        <span class="lg qw">Flow builds &amp; tests</span>
+        <span class="lg swing">Big swings</span>
       </div>
 
-      <div class="note-box"><b>Dependencies to watch:</b> the loyalty launch gates the loyalty mentions in welcome, second-purchase, and post-purchase, plus the donate-points test. Occupation capture has to ship before profession-based personalization and the "profession" segment go live. The testing framework underpins every test in the roadmap, which is why it sits in week one.</div>
+      <div class="note-box"><b>Dependencies to watch:</b> the loyalty launch gates the loyalty mentions in welcome, second-purchase, and post-purchase, plus the donate-points test. Occupation capture has to ship before profession-based personalization and the "profession" segment go live. The testing framework underpins every test in the roadmap, which is why it sits in week one. <b>Where the big swings ride along with earlier work:</b> occupation capture feeds both loyalty tiers and persona routing, the onboarding revamp is where loyalty-led welcome content lands once the program is live, and the manual persona pilot reuses the welcome and abandonment messaging tests rather than needing net-new builds.</div>
     </section>
   </div>
 
